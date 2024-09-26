@@ -65,7 +65,9 @@
     "features": "Features",
     "login": "Login",
     "openApp": "Open App",
-    "menu": "Menu"
+    "menu": "Menu",
+    "portfolio": "Portfolio",
+    "billing": "Billing"
   },
   "Login": {
     "back": "Back",

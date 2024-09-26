@@ -65,7 +65,9 @@
     "features": "Recursos",
     "login": "Login",
     "openApp": "Abrir aplicativo",
-    "menu": "Menu"
+    "menu": "Menu",
+    "portfolio": "Portfólio",
+    "billing": "Faturamento"
   },
   "Login": {
     "back": "Voltar",

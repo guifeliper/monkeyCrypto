@@ -24,8 +24,11 @@ const CustomTooltip = ({ active, payload, label }) => {
             {label}
           </h3>
         </div>
-        {payload.map((item) => (
-          <div className="flex items-center space-x-1.5 p-2 text-center">
+        {payload.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center space-x-1.5 p-2 text-center"
+          >
             <p className="text-sm text-muted-foreground">{item.name}:</p>
             <p className="align-middle text-lg font-medium leading-none">
               {item.value}%

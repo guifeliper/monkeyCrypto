@@ -1,8 +1,5 @@
-import Link from "next/link"
-
 import { getMessages } from "@/components/get-messages"
 import { MainNav } from "@/components/main-nav"
-import { DashboardNav } from "@/components/nav"
 import { SiteFooter } from "@/components/site-footer"
 import { buttonVariants } from "@/components/ui/button"
 import { UserAccountNav } from "@/components/user-account-nav"
@@ -11,6 +8,7 @@ import { getCurrentUser } from "@/lib/session"
 import { cn } from "@/lib/utils"
 import pick from "lodash/pick"
 import { NextIntlClientProvider } from "next-intl"
+import Link from "next/link"
 
 interface DashboardLayoutProps {
   children?: React.ReactNode
@@ -57,14 +55,10 @@ export default async function DashboardLayout({
             )}
           </div>
         </header>
-        <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
-          <aside className="hidden w-[200px] flex-col md:flex">
-            <DashboardNav items={dashboardConfig.sidebarNav} />
-          </aside>
-          <main className="flex w-full flex-1 flex-col overflow-hidden">
-            {children}
-          </main>
-        </div>
+
+        <main className="container grid flex-1 gap-6 md:grid-cols-[400px_1fr]">
+          {children}
+        </main>
         <SiteFooter className="border-t" />
       </div>
     </NextIntlClientProvider>

@@ -1,19 +1,20 @@
-import { DashboardHeader } from "@/components/header"
-import { useTranslations } from "next-intl"
+import { Holdings } from "@/components/holdings"
+import { InvestmentSideBar } from "@/components/investment-sidebar"
+import { Fragment } from "react"
 
 export const metadata = {
   title: "Dashboard",
 }
 
 export default function DashboardPage() {
-  const t = useTranslations("Dashboard")
-
   return (
-    <div>
-      <DashboardHeader
-        heading={t("portfolio")}
-        text={t("manage-portfolio")}
-      ></DashboardHeader>
-    </div>
+    <Fragment>
+      <div className="relative grow gap-4 overflow-x-hidden overflow-y-scroll bg-transparent">
+        <InvestmentSideBar />
+      </div>
+      <div className="gap-4">
+        <Holdings />
+      </div>
+    </Fragment>
   )
 }

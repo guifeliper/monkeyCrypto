@@ -16,6 +16,8 @@ export const env = createEnv({
     LEMON_SQUEEZY_STORE_ID: z.string().min(1),
     LEMON_SQUEEZY_BASIC_MONTHLY_PLAN_ID: z.string().min(1),
     LEMON_SQUEEZY_PRO_MONTHLY_PLAN_ID: z.string().min(1),
+    KRANKEN_API_KEY: z.string().min(1),
+    KRANKEN_SECRET_KEY: z.string().min(1),
   },
   client: {
     NEXT_PUBLIC_APP_URL: z.string().min(1),
@@ -35,5 +37,7 @@ export const env = createEnv({
       process.env.LEMON_SQUEEZY_BASIC_MONTHLY_PLAN_ID,
     LEMON_SQUEEZY_PRO_MONTHLY_PLAN_ID:
       process.env.LEMON_SQUEEZY_PRO_MONTHLY_PLAN_ID,
+    KRANKEN_API_KEY: process.env.KRAKEN_API_KEY,
+    KRANKEN_SECRET_KEY: process.env.KRAKEN_SECRET_KEY,
   },
 })
